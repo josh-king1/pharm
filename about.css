@@ -275,6 +275,7 @@ body.dark-mode .glass-navbar {
 /* ===== MISSION ===== */
 .mission-section {
   background: #fff;
+  margin: 40px 0;
 }
 
 .mission-box {
@@ -284,6 +285,9 @@ body.dark-mode .glass-navbar {
 
 /* ===== WHY ===== */
 .why-section {
+  padding: 80px 0;
+  margin: 50px 0 0 0;
+  /* width: 100%; */
   background: #f8fbff;
 }
 
