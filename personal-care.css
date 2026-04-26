@@ -1,0 +1,309 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+ background: linear-gradient(135deg, #f8fbff, #eefbff 0.4);
+    min-height: 100vh;
+}
+
+/* Align icons properly */
+.icon-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Icon styling */
+.icon-group i {
+    font-size: 1.3rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-group i:hover {
+    color: #0d6efd;
+    transform: translateY(-2px);
+}
+
+/* Custom Dropdown */
+.custom-dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    padding: 10px 0;
+    display: none;
+    animation: fadeIn 0.3s ease;
+    z-index: 1001;
+}
+
+/* Dropdown links */
+.custom-dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+    z-index: 1001;
+}
+
+.custom-dropdown a:hover {
+    background: #0d6efd;
+    color: #fff;
+    padding-left: 25px;
+    z-index: 1001;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Glass Navbar ===== */
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Nav links styling */
+.glass-navbar .nav-link {
+    color: #000;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.glass-navbar .nav-link:hover {
+    color: #00e6e6;
+    transform: translateY(-2px);
+}
+
+/* Dropdown glass effect */
+.glass-dropdown {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dropdown .dropdown-item {
+    color: #fff;
+}
+
+.glass-dropdown .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #00e6e6;
+}
+
+/* HERO */
+.hero-section {
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fade */
+#hero-title,
+#hero-text {
+    transition: 0.5s;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-left: 20px;
+        text-align: center;
+    }
+}
+
+.cart-box,
+.theme-box {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0d6efd;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.cart-box:hover,
+.theme-box:hover {
+    transform: scale(1.1);
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* FORCE ALL COMMON CONTAINERS */
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .news-section,
+body.dark-mode .testimonial-section,
+body.dark-mode .container,
+body.dark-mode section {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+/* FORCE BOOTSTRAP BACKGROUNDS */
+body.dark-mode .bg-light {
+    background: #1e1e1e !important;
+}
+
+body.dark-mode .bg-white {
+    background: #1e1e1e !important;
+}
+
+/* NAV LINKS */
+body.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+/* GLASS NAVBAR DARK MODE FIX */
+body.dark-mode .glass-navbar {
+    background: rgba(20, 20, 20, 0.6) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+/* HERO */
+.care-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('./image/bg2.jpg') center/cover no-repeat;
+}
+
+/* CARD */
+.care-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.care-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.care-img {
+    position: relative;
+}
+
+.care-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* STOCK */
+.stock {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: white;
+}
+
+.in-stock { background: green; }
+.low-stock { background: orange; }
+.out-stock { background: red; }
+
+/* PRICE */
+.price {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* ===== FOOTER ===== */
+.footer-section {
+  background: #0d1b2a;
+  color: #fff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* input */
+.footer-section input {
+  border-radius: 10px;
+}

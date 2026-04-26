@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SERVICE MEDICARE</title>
+    <title>Personal Care - MediCare</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="personal-care.css">
 </head>
 <body>
-        <!-- ================= NAVBAR 1 ================= -->
+      <!-- ================= NAVBAR 1 ================= -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm">
   <div class="container-fluid">
 
@@ -65,7 +65,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            MEDICINES
+            PERSONAL CARE
           </a>
           <ul class="dropdown-menu glass-dropdown">
             <li><a class="dropdown-item" href="devices.html">Devices</a></li>
@@ -91,7 +91,6 @@
     </div>
   </div>
 </nav>
-
     <!-- CART FLOAT -->
   <div class="cart-box shadow position-fixed bottom-0 end-0 m-4 bg-white p-3 rounded">
     <i class="bi bi-cart4"></i>
@@ -101,84 +100,151 @@
 <div class="theme-box shadow position-fixed bottom-0 start-0 m-4 bg-white rounded-circle">
   <i id="theme-toggle" class="bi bi-moon-fill"></i>
 </div>
-<!-- ================= HERO SECTION ================= -->
-<section class="service-hero text-center text-white d-flex align-items-center">
+<!-- ================= HERO ================= -->
+<section class="care-hero text-white text-center d-flex align-items-center">
   <div class="container">
-    <h1 class="fw-bold display-5">Our Healthcare Services</h1>
-    <p class="lead">Quality care, trusted solutions, and fast delivery at your fingertips</p>
-    <a href="#services" class="btn btn-light mt-3 px-4">Explore Services</a>
+    <h1 class="fw-bold display-5">Personal Care Products</h1>
+    <p class="lead">Feel fresh, confident, and healthy every day</p>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-5">
-  <div class="container">
+<!-- ================= FILTER BAR ================= -->
+<section class="py-3 bg-light">
+  <div class="container d-flex justify-content-between flex-wrap gap-2">
 
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">What We Offer</h2>
-      <p class="text-muted">We provide a wide range of healthcare services for your wellbeing</p>
-    </div>
+    <input type="text" class="form-control w-50" placeholder="Search personal care products...">
+
+    <select class="form-select w-auto">
+      <option>All Categories</option>
+      <option>Skin Care</option>
+      <option>Hair Care</option>
+      <option>Oral Care</option>
+      <option>Hygiene</option>
+    </select>
+
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="py-5">
+  <div class="container">
 
     <div class="row g-4">
 
-      <!-- Service 1 -->
+      <!-- PRODUCT 1 -->
       <div class="col-md-4">
-        <div class="service-card shadow-sm">
-          <i class="bi bi-capsule service-icon"></i>
-          <h5>Medicine Supply</h5>
-          <p>Get genuine medicines delivered to your doorstep quickly and safely.</p>
+        <div class="care-card shadow-sm">
+
+          <div class="care-img">
+            <img src="./image/soap.jpg" class="img-fluid">
+            <span class="stock in-stock">In Stock</span>
+          </div>
+
+          <div class="p-3">
+            <h6 class="fw-bold">Moisturizing Body Soap</h6>
+            <small class="text-muted">Dettol</small>
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">₦2,500</span>
+              <button class="btn btn-primary btn-sm add-to-cart">Add</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Service 2 -->
+      <!-- PRODUCT 2 -->
       <div class="col-md-4">
-        <div class="service-card shadow-sm">
-          <i class="bi bi-truck service-icon"></i>
-          <h5>Fast Delivery</h5>
-          <p>Same-day delivery available for urgent medical needs and prescriptions.</p>
+        <div class="care-card shadow-sm">
+
+          <div class="care-img">
+            <img src="./image/cream.jpg" class="img-fluid">
+            <span class="stock low-stock">Low Stock</span>
+          </div>
+
+          <div class="p-3">
+            <h6 class="fw-bold">Skin Brightening Cream</h6>
+            <small class="text-muted">Nivea</small>
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">₦6,000</span>
+              <button class="btn btn-primary btn-sm add-to-cart">Add</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Service 3 -->
+      <!-- PRODUCT 3 -->
       <div class="col-md-4">
-        <div class="service-card shadow-sm">
-          <i class="bi bi-heart-pulse service-icon"></i>
-          <h5>Health Monitoring</h5>
-          <p>Track your health with our modern monitoring devices and tools.</p>
+        <div class="care-card shadow-sm">
+
+          <div class="care-img">
+            <img src="./image/shampoo.jpg" class="img-fluid">
+            <span class="stock out-stock">Out of Stock</span>
+          </div>
+
+          <div class="p-3">
+            <h6 class="fw-bold">Anti-Dandruff Shampoo</h6>
+            <small class="text-muted">Head & Shoulders</small>
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">₦4,500</span>
+              <button class="btn btn-secondary btn-sm" disabled>Unavailable</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Service 4 -->
+      <!-- PRODUCT 4 -->
       <div class="col-md-4">
-        <div class="service-card shadow-sm">
-          <i class="bi bi-person-check service-icon"></i>
-          <h5>Consultation</h5>
-          <p>Talk to certified healthcare professionals anytime, anywhere.</p>
+        <div class="care-card shadow-sm">
+
+          <div class="care-img">
+            <img src="./image/toothpaste.jpg" class="img-fluid">
+            <span class="stock in-stock">In Stock</span>
+          </div>
+
+          <div class="p-3">
+            <h6 class="fw-bold">Whitening Toothpaste</h6>
+            <small class="text-muted">Colgate</small>
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">₦1,800</span>
+              <button class="btn btn-primary btn-sm add-to-cart">Add</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Service 5 -->
+      <!-- PRODUCT 5 -->
       <div class="col-md-4">
-        <div class="service-card shadow-sm">
-          <i class="bi bi-shield-check service-icon"></i>
-          <h5>Trusted Products</h5>
-          <p>We provide only verified and approved pharmaceutical products.</p>
-        </div>
-      </div>
+        <div class="care-card shadow-sm">
 
-      <!-- Service 6 -->
-      <div class="col-md-4">
-        <div class="service-card shadow-sm">
-          <i class="bi bi-clipboard2-pulse service-icon"></i>
-          <h5>Prescription Management</h5>
-          <p>Upload and manage prescriptions easily with secure storage.</p>
+          <div class="care-img">
+            <img src="./image/deodorant.jpg" class="img-fluid">
+            <span class="stock in-stock">In Stock</span>
+          </div>
+
+          <div class="p-3">
+            <h6 class="fw-bold">Fresh Deodorant Spray</h6>
+            <small class="text-muted">Dove</small>
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">₦3,200</span>
+              <button class="btn btn-primary btn-sm add-to-cart">Add</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
+
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="footer-section">
 
@@ -235,10 +301,9 @@
   </div>
 
 </footer>
-
-
 </body>
 <script src="script.js"></script>
+<script src="devices.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>
